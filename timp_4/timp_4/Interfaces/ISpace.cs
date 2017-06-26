@@ -10,7 +10,7 @@ namespace timp_4
     {
         int GetNumberOfRooms();//получение количества комнат
 
-      void SetNumberOfRooms(int number);//изменение кличества комнaт
+        void SetNumberOfRooms(int number);//изменение кличества комнaт
 
         double GetSquare();//получение площади
 

@@ -76,56 +76,73 @@ namespace timp_4
             return count;
         }
 
-        public DwellingFloor[] GetArrayDwellingFloors()
+        //public DwellingFloor[] GetArrayDwellingFloors()
+        //{
+        //    DwellingFloor[] df = new DwellingFloor[this.dfloor.Count];
+        //    this.dfloor.CopyTo(df, 0);
+        //    return df;
+        //}
+
+        public IFloor[] GetArrayOfFloors()
         {
+            //return GetArrayDwellingFloors();
             DwellingFloor[] df = new DwellingFloor[this.dfloor.Count];
             this.dfloor.CopyTo(df, 0);
             return df;
         }
 
-        public IFloor[] GetArrayOfFloors()
-        {
-            return GetArrayDwellingFloors();
-        }
-
-        public DwellingFloor GetDwellingFloor(int number)
-        {
-            return this.dfloor[number];
-        }
+        //public DwellingFloor GetDwellingFloor(int number)
+        //{
+        //    return this.dfloor[number];
+        //}
 
         public IFloor GetFloor(int number)
         {
-            return GetDwellingFloor(number);
+            //return GetDwellingFloor(number);
+            return this.dfloor[number];
         }
 
-        public Flat GetBestFlat()
+        //public Flat GetBestFlat()
+        //{
+        //    Flat returningFlat = dfloor[0].GetBestFlat();
+        //    double space = returningFlat.GetSquare();
+
+        //    foreach (DwellingFloor df in dfloor)
+        //    {
+        //        if (space < df.GetBestFlat().GetSquare())
+        //        {
+        //            returningFlat = df.GetBestFlat();
+        //            space = returningFlat.GetSquare();
+        //        }
+        //    }
+        //    return returningFlat;
+        //}
+
+        public ISpace GetBestSpace()
         {
-            Flat returningFlat = dfloor[0].GetBestFlat();
+            //return GetBestFlat();
+            ISpace returningFlat = dfloor[0].GetBestSpace();
             double space = returningFlat.GetSquare();
 
             foreach (DwellingFloor df in dfloor)
             {
-                if (space < df.GetBestFlat().GetSquare())
+                if (space < df.GetBestSpace().GetSquare())
                 {
-                    returningFlat = df.GetBestFlat();
+                    returningFlat = df.GetBestSpace();
                     space = returningFlat.GetSquare();
                 }
             }
             return returningFlat;
         }
 
-        public ISpace GetBestSpace()
-        {
-            return GetBestFlat();
-        }
-
-        public void ChangeDwellingFloor(int number, DwellingFloor df)
-        {
-            this.dfloor[number] = df;
-        }
+        //public void ChangeDwellingFloor(int number, DwellingFloor df)
+        //{
+        //    this.dfloor[number] = df;
+        //}
         public void ChangeFloor(int number, IFloor floor)
         {
-            ChangeDwellingFloor(number, floor as DwellingFloor);
+            this.dfloor[number] = floor as DwellingFloor;
+            //ChangeDwellingFloor(number, floor as DwellingFloor);
         }
         //вспомогательные методы получения индексов этажа и квартиры по номеру квартиры
         private int GetIndexOfFloor(int NumberOfFlat)
@@ -178,64 +195,81 @@ namespace timp_4
             return IndexOfFlat;
         }
 
-        public Flat GetFlat(int number)
-        {
-            return this.dfloor[GetIndexOfFloor(number)].GetArrayOfFlats()[GetIndexOfFlat(number)];
-        }
+        //public Flat GetFlat(int number)
+        //{
+        //    return this.dfloor[GetIndexOfFloor(number)].GetArrayOfFlats()[GetIndexOfFlat(number)];
+        //}
 
         public ISpace GetSpace(int number)
         {
-            return GetFlat(number);
+            return this.dfloor[GetIndexOfFloor(number)].GetArrayOfSpaces()[GetIndexOfFlat(number)];
         }
 
         
-        public void ChangeFlat (int number, Flat f)
-        {
-            this.dfloor[GetIndexOfFloor(number)].ChangeFlat(GetIndexOfFlat(number), f);
-        }
+        //public void ChangeFlat (int number, Flat f)
+        //{
+        //    this.dfloor[GetIndexOfFloor(number)].ChangeFlat(GetIndexOfFlat(number), f);
+        //}
 
         public void ChangeSpace(int number, ISpace space)
         {
-            ChangeFlat(number, space as Flat);
+            //ChangeFlat(number, space as Flat);
+            this.dfloor[GetIndexOfFloor(number)].ChangeSpace(GetIndexOfFlat(number), space as Flat);
         }
 
-        public void RemoveFlat (int number)
-        {
-            this.dfloor[GetIndexOfFloor(number)].RemoveFlatAt(GetIndexOfFlat(number)); 
-        }
+        //public void RemoveFlat (int number)
+        //{
+        //    this.dfloor[GetIndexOfFloor(number)].RemoveFlatAt(GetIndexOfFlat(number)); 
+        //}
 
         public void RemoveSpace(int number)
         {
-            RemoveFlat(number);
+            //RemoveFlat(number);
+            this.dfloor[GetIndexOfFloor(number)].RemoveFlatAt(GetIndexOfFlat(number));
         }
 
         public void AddFlat(int number, Flat f)
         {
-            this.dfloor[GetIndexOfFloor(number)].AddFlat(GetIndexOfFlat(number), f);  
+            this.dfloor[GetIndexOfFloor(number)].InsertSpace(GetIndexOfFlat(number), f);  
         }
 
-        public Flat[] GetSortArrayOfFlats()
+        //public Flat[] GetSortArrayOfFlats()
+        //{
+        //    Flat[] f = new Flat[this.GetNumberOfSpaces()];
+        //    int i = 0;
+
+        //    DwellingFloor [] dfArray = this.GetArrayDwellingFloors();
+        //    foreach (DwellingFloor df in dfArray)
+        //    {
+        //        for (int j = 0; j < df.GetArrayOfSpaces().Length; j++)
+        //        {
+        //            f[i] = df.GetArrayOfFlats()[j];
+        //            i++;
+        //        }
+        //    }
+
+        //    Array.Sort(f);
+        //    return f;
+        //}
+
+        public ISpace[] GetSortArrayOfSpaces()
         {
-            Flat[] f = new Flat[this.GetNumberOfSpaces()];
+            //return GetSortArrayOfFlats();
+            ISpace[] f = new ISpace[this.GetNumberOfSpaces()];
             int i = 0;
 
-            DwellingFloor [] dfArray = this.GetArrayDwellingFloors();
-            foreach (DwellingFloor df in dfArray)
+            IFloor[] dfArray = this.GetArrayOfFloors();//Правка
+            foreach (var df in dfArray)
             {
                 for (int j = 0; j < df.GetArrayOfSpaces().Length; j++)
                 {
-                    f[i] = df.GetArrayOfFlats()[j];
+                    f[i] = df.GetArrayOfSpaces()[j];
                     i++;
                 }
             }
 
             Array.Sort(f);
             return f;
-        }
-
-        public ISpace[] GetSortArrayOfSpaces()
-        {
-            return GetSortArrayOfFlats();
         }
 
         public override string ToString()

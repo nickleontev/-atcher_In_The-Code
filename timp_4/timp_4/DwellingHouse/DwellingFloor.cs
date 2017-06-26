@@ -56,36 +56,41 @@ namespace timp_4
             return tr;
         }
 
-        public Flat[] GetArrayOfFlats()
+        //public Flat[] GetArrayOfFlats()
+        //{
+        //    Flat[] arrayOfFlats = new Flat[this.flats.Count];
+        //    flats.CopyTo(arrayOfFlats, 0);
+        //    return arrayOfFlats;
+        //}
+
+        public ISpace[] GetArrayOfSpaces()
         {
             Flat[] arrayOfFlats = new Flat[this.flats.Count];
             flats.CopyTo(arrayOfFlats, 0);
             return arrayOfFlats;
+            //return GetArrayOfFlats();
         }
 
-        public ISpace[] GetArrayOfSpaces()
-        {
-            return GetArrayOfFlats();
-        }
-
-        public Flat GetFlat(int number)
-        {
-            return this.flats[number];
-        }
+        //public Flat GetFlat(int number)
+        //{
+        //    return this.flats[number];
+        //}
         public ISpace GetSpace(int numberOffice)
         {
-            return GetFlat(numberOffice) as ISpace;
+            return this.flats[numberOffice];
+            //return GetFlat(numberOffice) as ISpace;
         }
 
-        public void ChangeFlat(int number, Flat f)
-        {
-            flats[number] = f;
-        }
-
+        //public void ChangeFlat(int number, Flat f)
+        //{
+        //    flats[number] = f;
+        //}
         public void ChangeSpace(int number, ISpace space)
         {
-            ChangeFlat(number, space as Flat);
+            flats[number] = space as Flat;
+            //ChangeFlat(number, space as Flat);
         }
+
         public void RemoveFlatAt(int number)
         {
             this.flats.RemoveAt(number);
@@ -96,7 +101,23 @@ namespace timp_4
             RemoveFlatAt(number);
         }
 
-        public Flat GetBestFlat()
+        //public Flat GetBestFlat()
+        //{
+        //    Flat returningFlat = flats[0];
+        //    double space = flats[0].GetSquare();
+
+        //    foreach (Flat f in flats)
+        //    {
+        //        if (space < f.GetSquare())
+        //        {
+        //            space = f.GetSquare();
+        //            returningFlat = f;
+        //        }
+        //    }
+        //    return returningFlat;
+        //}
+
+        public ISpace GetBestSpace()
         {
             Flat returningFlat = flats[0];
             double space = flats[0].GetSquare();
@@ -110,21 +131,18 @@ namespace timp_4
                 }
             }
             return returningFlat;
+            //return GetBestFlat();
         }
 
-        public ISpace GetBestSpace()
-        {
-            return GetBestFlat();
-        }
-
-        public void AddFlat(int number, Flat f)
-        {
-            flats.Insert(number, f);
-        }
+        //public void AddFlat(int number, Flat f)
+        //{
+        //    flats.Insert(number, f);
+        //}
 
         public void InsertSpace(int number, ISpace space)
         {
-            AddFlat(number, space as Flat);
+            flats.Insert(number, space as Flat);
+            //AddFlat(number, space as Flat);
         }
 
         public override string ToString()

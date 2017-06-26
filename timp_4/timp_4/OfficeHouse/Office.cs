@@ -31,12 +31,12 @@ namespace timp_4
         }
 
 
-        public int GetNumberOfRoom()
+        public int GetNumberOfRooms()
         {
             return this.room;
         }//получение количества комнат
 
-        public void SetNumberOfRoom(int number)
+        public void SetNumberOfRooms(int number)
         {
             this.room = room;
         }//изменение кличества комнaт

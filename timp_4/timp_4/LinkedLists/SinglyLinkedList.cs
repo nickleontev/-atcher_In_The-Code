@@ -10,16 +10,15 @@ namespace timp_4
 {
     class SinglyLinkedList<T> : IEnumerable<T>
     {
-        public Node<T> _head;
-        public Node<T> _tail;
+        private Node<T> _head;
+        private Node<T> _tail;
 
         public int Count
         {
             get;
             private set;
         }
-
-        #region  Индексация
+        
         public T this[int i]
         {
             get
@@ -35,7 +34,6 @@ namespace timp_4
         public T GetAt(int numberNode)
         {
             Node<T> temp = Agregator(numberNode);
-
             return temp.Value;
         }
 
@@ -57,7 +55,7 @@ namespace timp_4
             }
             return temp;
         }
-        #endregion
+
 
         public void Add(T value)
         {
@@ -85,7 +83,7 @@ namespace timp_4
                 _tail = _head;
             Count++;
         }
-        public void AddInsert(int index, T item)
+        public void Insert(int index, T item)
         {
             Node<T> newElement = new Node<T>(item);
             
@@ -221,6 +219,7 @@ namespace timp_4
         {
             Node<T> newElement = new Node<T>(item);
 
+
             if (index == this.Count)
             {
                 int i = 0;
@@ -230,15 +229,15 @@ namespace timp_4
                 {
                     if (_head == null)
                     {
-                        _head = newElement;
-                        _tail = newElement;
-                        temp = _head;
+                        //_head = newElement;
+                        //_tail = newElement;
+                        //temp = _head;
                         break;
                     }
-                    if (temp == null)
-                    {
-                        temp = _head;
-                    }
+                    //if (temp == null)
+                    //{
+                    //    temp = _head;
+                    //}
                     else
                     {
                         temp = temp.Next;
@@ -280,7 +279,7 @@ namespace timp_4
                     //исключение - индекс отрицательный или больше размера. 
                 }
             }
-        }
+        }//его считай нет, там просто скопированый Insert
 
         public void CopyTo(T[] array, int arrayIndex)
         {
@@ -325,11 +324,11 @@ namespace timp_4
             return ((IEnumerable<T>)this).GetEnumerator();
         }
         
-        public void Clear()
-        {
-            _head = null;
-            _tail = null;
-            Count = 0;
-        }
+        //public void Clear()
+        //{
+        //    _head = null;
+        //    _tail = null;
+        //    Count = 0;
+        //}
        }
 }

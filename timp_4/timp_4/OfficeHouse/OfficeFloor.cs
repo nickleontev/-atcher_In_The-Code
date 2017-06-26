@@ -8,53 +8,8 @@ namespace timp_4
 {
     class OfficeFloor : IFloor
     {
-        #region  Индексация
-        public Office this[int i]
-        {
-            get
-            {
-                return this.GetAt(i);
-            }
-            set
-            {
-                SetAt(i, value);
-            }
-        }
-
-        public void SetAt(int numberNode, Office a)
-        {
-            Node<Office> temp = Agregator(numberNode);
-            temp.Value = a;
-        }
-
-        public Office GetAt(int numberNode)
-        {
-            if (numberNode > CLL.Count - 1)
-            {
-                throw  new SpaceIndexOutOfBoundsException();
-            }
-            Node<Office> temp = Agregator(numberNode);
-
-            return temp.Value;
-        }
-
-        private Node<Office> Agregator(int numberNode)
-        {
-            int i = 0;
-            Node<Office> temp = CLL._head;
-
-            while (i < numberNode)
-            {
-                temp = temp.Next;
-                i++;
-            }
-            return temp;
-        }
-
-        #endregion
-        
         #region Конструкторы
-        public OfficeFloor(){}// null
+        public OfficeFloor(){}// null //в билдинге создаем пустой объект, поэтому он нужен, хз как исправить глянье сели заметишь этот комент
 
         public OfficeFloor(int numberOffice)
         {
@@ -73,7 +28,7 @@ namespace timp_4
             }
         }//принемает массив офисов этажа. 
         #endregion
-
+        //посомтри сюда, в конструкторы
         SinglyLinkedList<Office> CLL = new SinglyLinkedList<Office>();
 
         private Office GetNode(int numberNode)
@@ -84,9 +39,14 @@ namespace timp_4
         private void AddNode(int newNumberOffice,Office newOffice)
         {
             Office of = new Office();
-            CLL.AddInsert(newNumberOffice, newOffice);
+            CLL.Insert(newNumberOffice, newOffice);
         }//добавления узла в список по номеру.
-        
+
+        private void RemoveNode()
+        {
+            
+        }//null
+
 
         public int GetNumberOfSpaces()
         {
@@ -111,18 +71,13 @@ namespace timp_4
                 count += item.room;
             }
             return count;
-        }//получения общего количества комнат этажа. ---
-
-        public Office[] GetArrayOfOffice()
+        }//получения общего количества комнат этажа.
+        
+        public ISpace[] GetArrayOfSpaces()
         {
             Office[] array = new Office[CLL.Count];
             CLL.CopyTo(array, 0);
             return array;
-        }
-
-        public ISpace[] GetArrayOfSpaces()
-        {
-            return GetArrayOfOffice();
         }//получения массива офисов этажа. 
 
         public Office GetOffice(int numberOffice)
@@ -144,29 +99,22 @@ namespace timp_4
         {
             RemoveOfficeAt(number);
         }
-
-        public void ChangeOffice(int numberOffice, Office obj)
-        {
-            CLL.SetAt(numberOffice, obj);
-        }//изменения офиса по его номеру на этаже и ссылке на обновленный офис.
-
+        
         public void ChangeSpace(int number, ISpace space)
         {
-            ChangeOffice(number, space as Office);
-        }
+            CLL.SetAt(number, space as Office);
+        }//Правка!
+
         public void AddOffice(int futureNumberOffice)
         {
             AddNode(futureNumberOffice, new Office());
         }//добавления нового офиса на этаже по будущему номеру офиса.
-        public void AddOffice(int futureNumberOffice, Office office)
-        {
-            AddNode(futureNumberOffice, office);
-        }//добавления нового офиса на этаже по будущему номеру офиса.
-
+        
+        //Правка!
         public void InsertSpace(int number, ISpace space)
         {
-            AddOffice(number, space as Office);
-        }
+            AddNode(number, space as Office);
+        }//добавления нового офиса на этаже по будущему номеру офиса.
 
         public ISpace GetBestSpace()
         {
@@ -185,6 +133,10 @@ namespace timp_4
         }
        //получения самого большого по площади офиса этажа
 
+
+
+
+
         public void Display()
         {
             Console.WriteLine();
@@ -195,19 +147,11 @@ namespace timp_4
             Console.WriteLine();
             Console.WriteLine();
         }
-
         public override string ToString()
         {
             string s = " Количество оффисов: " + CLL.Count + "\n";
 
             return s;
         }
-
-
-        #region Синхронизация
-        public void СhangeNumberRoomOffice(int room){}//изменение кличества комнaт 
-
-        public void СhangeAreaOffice(int area){}//изменение площади 
-        #endregion
     }
 }

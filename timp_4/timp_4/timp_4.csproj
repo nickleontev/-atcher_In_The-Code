@@ -56,7 +56,6 @@
     <Compile Include="Interfaces\IBuilding.cs" />
     <Compile Include="Interfaces\IFloor.cs" />
     <Compile Include="Interfaces\ISpace.cs" />
-    <Compile Include="LinkedLists\DoublyLinkedList.cs" />
     <Compile Include="DwellingHouse\Dwelling.cs" />
     <Compile Include="DwellingHouse\DwellingFloor.cs" />
     <Compile Include="Exceptions\FloorIndexOutOfBoundsException.cs" />
