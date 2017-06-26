@@ -8,11 +8,6 @@ namespace timp_4
 {
     class Node<T>
     {
-        public Node()
-        {
-
-        }
-
         public Node(T value)
         {
             Value = value;

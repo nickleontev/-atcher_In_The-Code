@@ -7,7 +7,6 @@ using System.Runtime.Serialization;
 
 namespace timp_4
 {
-    [System.Serializable]
     class SpaceIndexOutOfBoundsException : Exception
     {
         public SpaceIndexOutOfBoundsException() { }
