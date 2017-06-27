@@ -28,3 +28,6 @@ C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4
 C:\Users\Александр\Desktop\timp_4_Last_version\timp_4\timp_4\bin\Debug\timp_4.exe.config
 C:\Users\Александр\Desktop\timp_4_Last_version\timp_4\timp_4\obj\Debug\timp_4.exe
 C:\Users\Александр\Desktop\timp_4_Last_version\timp_4\timp_4\obj\Debug\timp_4.pdb
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4_Last_version\timp_4\timp_4\bin\Debug\timp_4.exe.config
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4_Last_version\timp_4\timp_4\obj\Debug\timp_4.exe
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4_Last_version\timp_4\timp_4\obj\Debug\timp_4.pdb
