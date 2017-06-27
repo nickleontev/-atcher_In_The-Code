@@ -1,0 +1,30 @@
+C:\Users\sv\Desktop\ТИМП_ЛР4\timp_4\timp_4\bin\Debug\timp_4.exe.config
+C:\Users\sv\Desktop\ТИМП_ЛР4\timp_4\timp_4\obj\Debug\timp_4.csprojResolveAssemblyReference.cache
+C:\Users\sv\Desktop\ТИМП_ЛР4\timp_4\timp_4\obj\Debug\timp_4.ConsoleForm.resources
+C:\Users\sv\Desktop\ТИМП_ЛР4\timp_4\timp_4\obj\Debug\timp_4.Properties.Resources.resources
+C:\Users\sv\Desktop\ТИМП_ЛР4\timp_4\timp_4\obj\Debug\timp_4.csproj.GenerateResource.Cache
+C:\Users\sv\Desktop\ТИМП_ЛР4\timp_4\timp_4\bin\Debug\timp_4.exe
+C:\Users\sv\Desktop\ТИМП_ЛР4\timp_4\timp_4\bin\Debug\timp_4.pdb
+C:\Users\sv\Desktop\ТИМП_ЛР4\timp_4\timp_4\obj\Debug\timp_4.exe
+C:\Users\sv\Desktop\ТИМП_ЛР4\timp_4\timp_4\obj\Debug\timp_4.pdb
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4\timp_4\bin\Debug\timp_4.exe.config
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4\timp_4\obj\Debug\timp_4.exe
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4\timp_4\obj\Debug\timp_4.pdb
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4\timp_4\obj\Debug\timp_4.csprojResolveAssemblyReference.cache
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4\timp_4\obj\Debug\timp_4.ConsoleForm.resources
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4\timp_4\obj\Debug\timp_4.Properties.Resources.resources
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4\timp_4\obj\Debug\timp_4.csproj.GenerateResource.Cache
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4\timp_4\bin\Debug\timp_4.exe
+D:\Репозитории\Рефакторинг - 4 лабораторная ЗАБ\timp_4\timp_4\bin\Debug\timp_4.pdb
+C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4\timp_4\bin\Debug\timp_4.exe.config
+C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4\timp_4\obj\Debug\timp_4.exe
+C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4\timp_4\obj\Debug\timp_4.pdb
+C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4\timp_4\bin\Debug\timp_4.exe
+C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4\timp_4\bin\Debug\timp_4.pdb
+C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4\timp_4\obj\Debug\timp_4.csprojResolveAssemblyReference.cache
+C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4\timp_4\obj\Debug\timp_4.ConsoleForm.resources
+C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4\timp_4\obj\Debug\timp_4.Properties.Resources.resources
+C:\Users\sv\Desktop\-atcher_In_The-Code-master\-atcher_In_The-Code-master\timp_4\timp_4\obj\Debug\timp_4.csproj.GenerateResource.Cache
+C:\Users\Александр\Desktop\timp_4_Last_version\timp_4\timp_4\bin\Debug\timp_4.exe.config
+C:\Users\Александр\Desktop\timp_4_Last_version\timp_4\timp_4\obj\Debug\timp_4.exe
+C:\Users\Александр\Desktop\timp_4_Last_version\timp_4\timp_4\obj\Debug\timp_4.pdb
